@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -81,14 +81,14 @@ WSGI_APPLICATION = 'djangointermediario.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 # PostgreSQL (Heroku)
-DATABASES = {
-    'default': dj_database_url.config()
-}
+# DATABASES = {
+#     'default': dj_database_url.config()
+# }
 
 # MySQL
-# DATABASES = {
-#     'default': config('DATABASE_URL', default='django.db.backends.mysql', cast=db_url)
-# }
+DATABASES = {
+    'default': config('DATABASE_URL', default='django.db.backends.mysql', cast=db_url)
+}
 
 
 # Password validation

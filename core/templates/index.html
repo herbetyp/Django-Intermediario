@@ -15,6 +15,7 @@
 
 <body>
     <div class="container">
+        {% if produtos %}
         <h1>Produtos</h1>
         <div class="mt-4">
 
@@ -53,8 +54,13 @@
                 </tbody>
             </table>
         </div>
+        {% else %}
+        <div class="mt-5">
+            <h2>Não há produtos cadastrados :(</h2>
+        </div>
+        {% endif %}
         {% if request.user.is_authenticated %}
-        <div class="row">
+        <div class="row mt-4">
             <div class="col">
                 <a href="{% url 'produto' %}">
                     <button class="btn btn-primary">Cadastrar Produto</button>
