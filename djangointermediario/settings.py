@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from dj_database_url import parse as db_url
+from dj_database_url import parse as db_url, config
 from decouple import config, Csv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -79,9 +79,15 @@ WSGI_APPLICATION = 'djangointermediario.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# PostgreSQL (Heroku)
 DATABASES = {
-    'default': config('DATABASE_URL', default='django.db.backends.postgresql', cast=db_url)
+    'default': config()
 }
+
+# MySQL
+# DATABASES = {
+#     'default': config('DATABASE_URL', default='django.db.backends.mysql', cast=db_url)
+# }
 
 
 # Password validation
