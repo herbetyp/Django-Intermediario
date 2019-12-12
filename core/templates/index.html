@@ -53,6 +53,7 @@
                 </tbody>
             </table>
         </div>
+        {% if request.user.is_authenticated %}
         <div class="row">
             <div class="col">
                 <a href="{% url 'produto' %}">
@@ -60,6 +61,7 @@
                 </a>
             </div>
         </div>
+        {% endif %}
     </div>
     {% bootstrap_javascript jquery='full' %}
 </body>
