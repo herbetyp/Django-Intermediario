@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from dj_database_url import parse as db_url, config
+from dj_database_url import parse as db_url
+import dj_database_url
 from decouple import config, Csv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'djangointermediario.wsgi.application'
 
 # PostgreSQL (Heroku)
 DATABASES = {
-    'default': config()
+    'default': dj_database_url.config()
 }
 
 # MySQL
