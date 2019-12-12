@@ -13,7 +13,7 @@
 
 <body>
     <div class="container">
-        <h1>Produto</h1>
+        <h1>Cadastrar Produto</h1>
         {% bootstrap_messages %}
 
         <form action="{% url 'produto' %}" method="POST" class="form" autocomplete="off" enctype="multipart/form-data">
@@ -23,6 +23,13 @@
             <button type="submit" class="btn btn-primary">Cadastrar</button>
             {% endbuttons %}
         </form>
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'index' %}">
+                    <button class="btn btn-secondary">Produtos</button>
+                </a>
+            </div>
+        </div>
     </div>
     {% bootstrap_javascript jquery='full' %}
 </body>
