@@ -13,8 +13,8 @@ Desenvolvido com Django 3.0 - Python 3.8 - MariaDB/MySQL 10.1.43
 ## Como rodar o projeto? ##
 
 ```
-git clone https://github.com/Hp2501/Django_intermediario.git
-cd Django_intermediario
+git clone https://github.com/Hp2501/Django-intermediario.git
+cd Django-intermediario
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
