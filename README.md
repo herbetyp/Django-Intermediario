@@ -42,6 +42,7 @@ Obs: configurar o *__python-decouple__* e *__dj_database_url__*
 * Salvando dados no DB
 * Apresentando dados do DB no Template
 * Tralhando com seções do usuário
+* Deploy no Heroku
 
 
 ## JS - CSS
